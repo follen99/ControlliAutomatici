@@ -1,12 +1,14 @@
 
 % livello iniziale
-l0 = 10;
+l0_1 = 10;
+l0_2 = 5;
 
 % costante
-Win = 3;
+k1 = 3;
 
 % costante
-Ws = -1;
+k2 = -1;
 
 %superficie
-surface = 12;
+surface_tank1 = 12;
+surface_tank2 = 5;
