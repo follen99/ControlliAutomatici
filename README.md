@@ -68,6 +68,13 @@ syscl = feedback(loop, 1)	% la funzione di trasferimento a ciclo chiuso viene ca
 
 Da questo punto in poi possiamo effettuare delle analisi sulla FDT a ciclo chiuso come stabilità e risposte.
 
+Possiamo anche utilizzare un tool che ci permette di aggiungere poli, zeri e visualizzare come cambia la risposta impulsiva, a gradino, risposta in frequenza, etc...
+
+```matlab
+sisotool(FUNZIONE_DI_TRASFERIMENTO, guadagno di feedback)
+sisotool(g,1)
+```
+
 
 
 # Argomenti Lezioni
