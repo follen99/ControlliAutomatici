@@ -21,9 +21,15 @@ Repository dedicata all'esame di sistemi di Controlli Automatici
 
 # Tips
 
-## Perchè è preferibile un integratore rispetto ad un derivatore?
+## Perché è preferibile un integratore rispetto ad un derivatore?
 
-Perchè possiamo sempre calcolare l'area sottesa ad una curva, ma non sempre possiamo effettuare la derivata.
+Perché possiamo sempre calcolare l'area sottesa ad una curva, ma non sempre possiamo effettuare la derivata.
+
+## Perché non si può cancellare un polo instabile?
+
+Se dovessimo cancellare un polo instabile, si creerebbe un esponenziale di ampiezza molto piccola, ma di tipo **divergente**; quindi (anche dopo molto tempo) quel moto è destinato a tendere all'infinito (o un valore abbastanza grande) e quindi **sicuramente destabilizzerà il sistema**.
+
+Per quanto riguarda la cancellazione di un polo <u>stabile</u>, invece, si crea sempre un modo di ampiezza molto piccolo, ma di tipo **convergente**, quindi col tempo tende a zero e possiamo anche ignorarlo.
 
 ## Simulare controllore a ciclo chiuso MatLab
 
@@ -75,7 +81,16 @@ sisotool(FUNZIONE_DI_TRASFERIMENTO, guadagno di feedback)
 sisotool(g,1)
 ```
 
+### Funzione margin
 
+Possiamo usare la funzione `[Gm,Pm,Wcg,Wcp] = margin(SYS)` per ottenere:
+
+- Gm - margine di modulo
+- Pm - margine di fase
+- Wcg - frequenza associata al margine di modulo
+- Wcp - frequenza associata al margine di fase
+
+la funzione inoltre disegna i diagrammi di Bode per il sistema.
 
 # Argomenti Lezioni
 
